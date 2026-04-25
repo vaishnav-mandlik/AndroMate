@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    AndroMate Accessibility Service Configuration
+
+    This tells Android what our service can do:
+    - See all windows (allWindows)
+    - Get window content (retrieveWindowContent)
+    - Perform gestures (canPerformGestures)
+    - React to all event types
+    - Work with ALL apps (no packageNames filter)
+-->
+<accessibility-service
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/accessibility_service_description"
+    android:accessibilityEventTypes="typeAllMask"
+    android:accessibilityFlags="flagDefault|flagReportViewIds|flagRetrieveInteractiveWindows|flagIncludeNotImportantViews|flagRequestEnhancedWebAccessibility"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:canRetrieveWindowContent="true"
+    android:canPerformGestures="true"
+    android:notificationTimeout="100"
+    android:settingsActivity="com.mandlik.andromate.MainActivity" />

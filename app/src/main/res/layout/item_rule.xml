@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/card_background"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginHorizontal="4dp"
+    android:gravity="center_vertical">
+
+    <!-- Rule info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Rule name -->
+        <TextView
+            android:id="@+id/text_rule_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Morning Music"
+            android:textSize="15sp"
+            android:textColor="#E4E4EF"
+            android:textStyle="bold" />
+
+        <!-- Trigger info -->
+        <TextView
+            android:id="@+id/text_rule_trigger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⏰ Daily at 6:00 AM"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:layout_marginTop="2dp" />
+
+        <!-- Action info -->
+        <TextView
+            android:id="@+id/text_rule_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎵 Play Spotify playlist"
+            android:textSize="12sp"
+            android:textColor="#00E5A0"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <!-- Enable/Disable toggle -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_rule_enabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true" />
+</LinearLayout>

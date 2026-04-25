@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0F"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEW RULE"
+            android:textSize="24sp"
+            android:textColor="#00E5A0"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Rule Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RULE NAME"
+            android:textSize="11sp"
+            android:textColor="#555570"
+            android:letterSpacing="0.3"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/input_rule_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. Morning Music"
+            android:textColor="#E4E4EF"
+            android:textColorHint="#444460"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:layout_marginBottom="20dp" />
+
+        <!-- ═══ TRIGGER SECTION ═══ -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WHEN (TRIGGER)"
+            android:textSize="11sp"
+            android:textColor="#FF5733"
+            android:letterSpacing="0.3"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Time Picker -->
+        <TimePicker
+            android:id="@+id/time_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner"
+            android:background="@drawable/card_background"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp"
+            android:theme="@style/Theme.AppCompat" />
+
+        <!-- Repeat Mode -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REPEAT"
+            android:textSize="11sp"
+            android:textColor="#555570"
+            android:letterSpacing="0.3"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spinner_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- ═══ ACTION SECTION ═══ -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DO (ACTION)"
+            android:textSize="11sp"
+            android:textColor="#00E5A0"
+            android:letterSpacing="0.3"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Action Type -->
+        <Spinner
+            android:id="@+id/spinner_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Action Data Label -->
+        <TextView
+            android:id="@+id/label_action_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WHICH APP?"
+            android:textSize="11sp"
+            android:textColor="#555570"
+            android:letterSpacing="0.3"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Action Data Input -->
+        <EditText
+            android:id="@+id/input_action_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tap button below to pick"
+            android:textColor="#E4E4EF"
+            android:textColorHint="#444460"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:textSize="14sp"
+            android:inputType="text"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Pick App Button -->
+        <Button
+            android:id="@+id/btn_pick_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📱  PICK AN APP"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:backgroundTint="#6C5CE7"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone" />
+
+        <!-- Pick Song Button -->
+        <Button
+            android:id="@+id/btn_pick_song"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎵  PICK A SONG"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:backgroundTint="#6C5CE7"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone" />
+
+        <!-- Extra Data Label (for SMS message) -->
+        <TextView
+            android:id="@+id/label_action_extra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MESSAGE"
+            android:textSize="11sp"
+            android:textColor="#555570"
+            android:letterSpacing="0.3"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+        <!-- Extra Data Input (for SMS message) -->
+        <EditText
+            android:id="@+id/input_action_extra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. Good morning!"
+            android:textColor="#E4E4EF"
+            android:textColorHint="#444460"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:textSize="14sp"
+            android:inputType="text"
+            android:layout_marginBottom="24dp"
+            android:visibility="gone" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btn_save_rule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💾  SAVE RULE"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:backgroundTint="#00E5A0"
+            android:textColor="#0A0A0F"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:layout_marginBottom="40dp" />
+
+    </LinearLayout>
+</ScrollView>

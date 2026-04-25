@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroMate</string>
+    <string name="accessibility_service_description">
+        AndroMate uses accessibility to automate tasks on your phone.
+        It can read screen content and perform actions like tapping,
+        typing, and scrolling in any app. All data stays on your device.
+    </string>
+</resources>

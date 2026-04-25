@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A0A0F">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PICK AN APP"
+        android:textSize="20sp"
+        android:textColor="#00E5A0"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:padding="20dp" />
+
+    <!-- Search bar -->
+    <EditText
+        android:id="@+id/input_search_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search apps..."
+        android:textColor="#E4E4EF"
+        android:textColorHint="#444460"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:textSize="15sp"
+        android:inputType="text"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- App list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_apps"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>
